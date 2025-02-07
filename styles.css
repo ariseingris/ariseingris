@@ -7,21 +7,21 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: aliceblue;
     display: flex;
-    flex-direction: row; /* Sidebar and content side by side */
+    flex-direction: row;
 }
 
 /* Sidebar Styles */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Initially hidden */
+    left: -250px;
     width: 250px;
-    background: #333;
+    background: #222;
     color: white;
     height: 100vh;
     padding: 15px;
     transition: left 0.3s ease;
-    z-index: 1000; /* Ensure the sidebar is above other content */
+    z-index: 1000;
 }
 
 .sidebar ul {
@@ -40,7 +40,7 @@ body {
 }
 
 .sidebar ul li a:hover {
-    background: #555;
+    background: #444;
 }
 
 /* Close Button in Sidebar */
@@ -49,9 +49,9 @@ body {
     top: 15px;
     right: 15px;
     background: none;
-    color: 	#808080; /* Set a new color for the close button (yellow) */
+    color: #808080;
     border: none;
-    font-size: 30px; /* Smaller font size for the close button */
+    font-size: 30px;
     cursor: pointer;
 }
 
@@ -61,16 +61,17 @@ body {
 
 /* Content Area */
 .content {
-    margin-left: 0; /* Content starts after the sidebar */
+    margin-left: 0;
     padding: 20px;
     transition: margin-left 0.3s ease;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the content vertically */
-    align-items: center; /* Center the content horizontally */
-    height: 100vh; /* Take full screen height */
-    text-align: center; /* Center text */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
 }
 
 /* Sidebar Visibility */
@@ -79,23 +80,20 @@ body {
 }
 
 .content.open {
-    margin-left: 250px; /* Adjust the content margin when the sidebar is open */
+    margin-left: 250px;
 }
 
-/* Toggle button for showing the sidebar */
+/* Toggle button */
 .toggle-btn {
-    font-size: 30px; /* Smaller icon size */
+    font-size: 30px;
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: #333;
-    color: 	#808080; /* Set the color of the hamburger icon to yellow */
+    background-color: #222;
+    color: #808080;
     border: none;
     padding: 10px;
     cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    line-height: 30px;
     border-radius: 5px;
 }
 
@@ -107,12 +105,14 @@ body {
 .toggle-btn:focus, .close-btn:focus {
     outline: none;
 }
-/* Image format*/
+
+/* Image format */
 img {
     border: 5px groove grey;
     margin: 20px;
 }
-button {
+
+button, input[type="submit"] {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #808080;
@@ -121,51 +121,39 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #808080;
+button:hover, input[type="submit"]:hover {
+    background-color: #666666;
 }
-h2 {
+
+h1, h2 {
     font-size: xx-large;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: azure;
 }
-p {
-    font-size: x-large;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-li {
+
+p, li {
     font-size: large;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-/* styles.css */
-
-input[type="submit"] {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #808080;
     color: white;
-    border: none;
-    cursor: pointer;
 }
 
-input[type="submit"]:hover {
-    background-color: #666666; /* Darker shade on hover */
-}
-/* --- */
+/* Container styles */
 .container {
     max-width: 800px;
-    background: white;
+    background: #222;
     padding: 20px;
     margin: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-}
-h1 {
-    text-align: center;
-    color: #0077cc;
-}
-.highlight {
-    font-weight: bold;
-    color: #cc0000;
+    color: white;
 }
 
+h1 {
+    text-align: center;
+    color: #00aaff;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #ff4444;
+}
